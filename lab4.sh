@@ -47,9 +47,15 @@ umask 0022
 #endregion
 
 #region 9
-
+echo 'ls /home/student' > script.sh
+chmod 741 script.sh
+./script.sh
+chmod +x script.sh
 #endregion
 
 #region 10
-
+mkdir ~/bin
+mv script.sh ~/bin
+echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
+source ~/.bashrc
 #endregion
